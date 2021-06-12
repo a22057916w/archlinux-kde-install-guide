@@ -22,4 +22,4 @@ cd /
 tar -xvzf backup.tgz
 ```
 The "x" stands for decompressoing or extracting file[(Source)](https://askubuntu.com/questions/524418/how-would-i-use-tar-for-full-backup-and-restore-with-system-on-ssd-and-home-on-h?newreg=fcaa6c1531e344a5831b547eef344fa4).
-#### Resoruce
+### Resoruce
