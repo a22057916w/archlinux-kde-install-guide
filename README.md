@@ -1,3 +1,16 @@
+## Synopsis
+
+| Item | Detail |
+| --- | --- |
+| Model | ASUS ZenBook UX501J |
+| Kernel | 5.12.8-arch1-1 |
+| Disk Encryption | ? |
+| Bootloader | ? |
+| Wireless | ? |
+| Graphics | ? |
+| Backlight | ? |
+| Audio | ? |
+
 ## BACKUP and RESTORE
 
 This is a "one-liner" exemple, you will have to add a lot of exceptions to the one command. Here is what I do.
