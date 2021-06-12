@@ -25,4 +25,4 @@ The ```-x``` stands for decompressoing or extracting file.
 ### Resoruce
 * [tar(1) - Linux manual page](https://man7.org/linux/man-pages/man1/tar.1.html)
 * [hard drive - How would I use tar for full backup and restore with system on SSD and home on HDD? - Ask Ubuntu](https://askubuntu.com/questions/524418/how-would-i-use-tar-for-full-backup-and-restore-with-system-on-ssd-and-home-on-h?newreg=fcaa6c1531e344a5831b547eef344fa4)
-* [linux - List the directories on depthlevel one in tar.gz - Stack Overflow](https://stackoverflow.com/questions/10837287/list-the-directories-on-depthlevel-one-in-tar-gz)
+* [鳥哥的 Linux 私房菜 -- 淺談備份策略](http://linux.vbird.org/linux_basic/0580backup.php)
