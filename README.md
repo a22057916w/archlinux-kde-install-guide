@@ -21,7 +21,7 @@ sudo su
 cd /
 tar -xvzf backup.tgz
 ```
-The "x" stands for decompressoing or extracting file.
+The ```-x``` stands for decompressoing or extracting file.
 ### Resoruce
 * [tar(1) - Linux manual page](https://man7.org/linux/man-pages/man1/tar.1.html)
 * [hard drive - How would I use tar for full backup and restore with system on SSD and home on HDD? - Ask Ubuntu](https://askubuntu.com/questions/524418/how-would-i-use-tar-for-full-backup-and-restore-with-system-on-ssd-and-home-on-h?newreg=fcaa6c1531e344a5831b547eef344fa4)
