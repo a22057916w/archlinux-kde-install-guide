@@ -11,7 +11,30 @@
 | Backlight | ? |
 | Audio | ? |
 
+## Pre-installation
+Secure Boot Control -> disable
+Tip: The installation image uses systemd-boot for booting in UEFI mode and syslinux for booting in BIOS mode. See README.bootparams for a list of boot parameters.
+
+make sure you have booted in UEFI mode by checking efi directory
+```
+ls /sys/firmware/efi/efivars
+```
+ensure the system clock is accurate
+```
+timedatectl set-ntp true
+```
+To check the service status, use ```timedatectl status```.
+
+Ensure your network interface is listed and enabled
+```
+ip link
+ping archlinux.org
+```
+
+
+
 ## PARTITION
+
 
 ### Resource
 * [(Other)UEFI? BIOS? Legacy? 淺談主機板UEFI觀念與迷思(轉錄) | by Ryan Lu | AI反斗城 | Medium](https://medium.com/ai%E5%8F%8D%E6%96%97%E5%9F%8E/other-uefi-bios-legacy-%E6%B7%BA%E8%AB%87%E4%B8%BB%E6%A9%9F%E6%9D%BFuefi%E8%A7%80%E5%BF%B5%E8%88%87%E8%BF%B7%E6%80%9D-%E8%BD%89%E9%8C%84-dc86f61b85bd)
