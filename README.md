@@ -13,6 +13,7 @@
 
 ## Pre-installation
 Secure Boot Control -> disable
+
 Tip: The installation image uses systemd-boot for booting in UEFI mode and syslinux for booting in BIOS mode. See README.bootparams for a list of boot parameters.
 
 make sure you have booted in UEFI mode by checking efi directory
