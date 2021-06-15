@@ -11,6 +11,8 @@
 | Backlight | ? |
 | Audio | ? |
 
+## PARTITION
+
 ## BACKUP and RESTORE
 
 This is a "one-liner" exemple, you will have to add a lot of exceptions to the one command. Here is what I do.
