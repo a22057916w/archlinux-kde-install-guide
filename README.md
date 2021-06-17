@@ -5,7 +5,7 @@
 | Model | ASUS ZenBook UX501J |
 | Kernel | 5.12.8-arch1-1 |
 | Disk Encryption | LVM |
-| Bootloader | ? |
+| Bootloader | GRUB |
 | Wireless | ? |
 | Graphics | ? |
 | Backlight | ? |
@@ -84,12 +84,33 @@ arch-chroot /mnt
 Time zone
 Set the time zone:
 ```
-ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+ln -sf /usr/share/zoneinfo/Asia/Taiwan /etc/localtime
 ```
 Run hwclock(8) to generate /etc/adjtime:
 ```
 hwclock --systohc
 ```
+check ```date```
+
+
+Network configuration
+Create the hostname file:
+```
+echo "willy" >> /etc/hostname
+```
+Add matching entries to hosts(5):
+```
+vim /etc/hosts
+```
+```
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	myhostname.localdomain	myhostname
+```
+If the system has a permanent IP address, it should be used instead of 127.0.1.1.
+
+Complete the network configuration for the newly installed environment, that may include installing suitable network management software.
+
 This command assumes the hardware clock is set to UTC. See System time#Time standard for details.
 
 
