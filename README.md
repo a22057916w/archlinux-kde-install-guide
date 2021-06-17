@@ -109,9 +109,11 @@ vim /etc/hosts
 ```
 If the system has a permanent IP address, it should be used instead of 127.0.1.1.
 
-Complete the network configuration for the newly installed environment, that may include installing suitable network management software.
-
-This command assumes the hardware clock is set to UTC. See System time#Time standard for details.
+Complete the network configuration for the newly installed environment, that may include installing suitable `network management` software.
+```
+pacman -S networkmanager
+systemctl enable NetworkManager
+```
 
 
 
