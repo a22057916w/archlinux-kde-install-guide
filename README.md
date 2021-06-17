@@ -38,7 +38,16 @@ To check the service status, use ```timedatectl status```.
 
 
 ## PARTITION
+```
+pvcreate /dev/sda3
+pvdisplay
 
+vgcreate vg1 /dev/sda3
+vgdisplay
+
+lvcreate -L 50G -n root vg1
+lvcreate -l !))%FREE -n home vg1
+```
 
 ### Resource
 * [(Other)UEFI? BIOS? Legacy? 淺談主機板UEFI觀念與迷思(轉錄) | by Ryan Lu | AI反斗城 | Medium](https://medium.com/ai%E5%8F%8D%E6%96%97%E5%9F%8E/other-uefi-bios-legacy-%E6%B7%BA%E8%AB%87%E4%B8%BB%E6%A9%9F%E6%9D%BFuefi%E8%A7%80%E5%BF%B5%E8%88%87%E8%BF%B7%E6%80%9D-%E8%BD%89%E9%8C%84-dc86f61b85bd)
