@@ -92,6 +92,13 @@ hwclock --systohc
 ```
 check ```date```
 
+Configuring Locale
+Uncomment the locales you are going to use in `/etc/locale.gen`. Then run:
+```
+locale-gen
+echo LANG=en_US.UTF-8 >> etc/locale.conf
+```
+
 
 Network configuration
 Create the hostname file:
@@ -115,6 +122,11 @@ pacman -S networkmanager
 systemctl enable NetworkManager
 ```
 
+Bootloader
+```
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+````
 
 
 ### Resource
