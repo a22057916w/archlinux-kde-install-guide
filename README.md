@@ -129,7 +129,7 @@ vim /etc/mkinitcpio.conf
 ```
 Edit the file and insert lvm2 between block and filesystems like so:
 ```
-HOOKS=(base udev ... block **lvm2** filesystems)
+HOOKS=(base udev ... block lvm2 filesystems)
 ```
 
 ```
