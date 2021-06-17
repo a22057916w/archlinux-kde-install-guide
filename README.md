@@ -122,6 +122,20 @@ pacman -S networkmanager
 systemctl enable NetworkManager
 ```
 
+Initramfs
+For `LVM`, system encryption or RAID, modify `mkinitcpio.conf` and recreate the initramfs image:
+```
+vim /etc/mkinitcpio.conf
+```
+Edit the file and insert lvm2 between block and filesystems like so:
+```
+HOOKS=(base udev ... block **lvm2** filesystems)
+```
+
+```
+pacman -S lvm2 linux
+mkinitcpio -P linux
+```
 Bootloader
 ```
 pacman -S grub efibootmgr
