@@ -67,6 +67,31 @@ mount /dev/vg1/root /mnt
 mkdir -p /mnt/home
 mount /dev/vg1/home /mnt/home
 ```
+Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
+```
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+check ```cat /mnt/etc/fstab```
+
+Chroot
+Change root into the new system:
+```
+arch-chroot /mnt
+```
+
+Time zone
+Set the time zone:
+```
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+```
+Run hwclock(8) to generate /etc/adjtime:
+```
+hwclock --systohc
+```
+This command assumes the hardware clock is set to UTC. See System time#Time standard for details.
+
+
+
 ### Resource
 * [(Other)UEFI? BIOS? Legacy? 淺談主機板UEFI觀念與迷思(轉錄) | by Ryan Lu | AI反斗城 | Medium](https://medium.com/ai%E5%8F%8D%E6%96%97%E5%9F%8E/other-uefi-bios-legacy-%E6%B7%BA%E8%AB%87%E4%B8%BB%E6%A9%9F%E6%9D%BFuefi%E8%A7%80%E5%BF%B5%E8%88%87%E8%BF%B7%E6%80%9D-%E8%BD%89%E9%8C%84-dc86f61b85bd)
 
