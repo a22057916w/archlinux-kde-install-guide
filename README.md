@@ -66,6 +66,8 @@ swapon /dev/sda2
 mount /dev/vg1/root /mnt
 mkdir -p /mnt/home
 mount /dev/vg1/home /mnt/home
+mkdir -p /mnt/boot
+mount /dev/sda1 
 ```
 Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
 ```
