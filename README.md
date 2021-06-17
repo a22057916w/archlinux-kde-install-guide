@@ -4,7 +4,7 @@
 | --- | --- |
 | Model | ASUS ZenBook UX501J |
 | Kernel | 5.12.8-arch1-1 |
-| Disk Encryption | ? |
+| Disk Encryption | LVM |
 | Bootloader | ? |
 | Wireless | ? |
 | Graphics | ? |
@@ -20,17 +20,20 @@ make sure you have booted in UEFI mode by checking efi directory
 ```
 ls /sys/firmware/efi/efivars
 ```
-ensure the system clock is accurate
-```
-timedatectl set-ntp true
-```
-To check the service status, use ```timedatectl status```.
 
 Ensure your network interface is listed and enabled
 ```
 ip link
 ping archlinux.org
 ```
+
+ensure the system clock is accurate
+```
+timedatectl set-ntp true
+```
+To check the service status, use ```timedatectl status```.
+
+
 
 
 
