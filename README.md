@@ -7,7 +7,7 @@
 | Disk Encryption | LVM |
 | Bootloader | GRUB |
 | Wireless | ? |
-| Graphics | ? |
+| Graphics | xf86-video-nouveau |
 | Backlight | ? |
 | Audio | PulseAudio |
 
@@ -133,7 +133,7 @@ HOOKS=(base udev ... block lvm2 filesystems)
 ```
 
 ```
-pacman -S lvm2 linux
+pacman -S lvm2 linux intel-ucode
 mkinitcpio -P linux
 ```
 Bootloader
