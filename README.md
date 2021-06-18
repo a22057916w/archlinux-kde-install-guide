@@ -142,7 +142,7 @@ pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ````
-**might get waring:** os-prober will not be executed to detect other bootable partitions arch
+**might get waring:** os-prober will not be executed to detect other bootable partitions
 
 
 Add a user.
