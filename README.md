@@ -103,7 +103,7 @@ echo LANG=en_US.UTF-8 >> etc/locale.conf
 Network configuration
 Create the hostname file:
 ```
-echo "willy" >> /etc/hostname
+echo "willylaptop" >> /etc/hostname
 ```
 Add matching entries to hosts(5):
 ```
@@ -112,7 +112,7 @@ vim /etc/hosts
 ```
 127.0.0.1	localhost
 ::1		localhost
-127.0.1.1	myhostname.localdomain	myhostname
+127.0.1.1	willylaptop.localdomain	willylaptop
 ```
 If the system has a permanent IP address, it should be used instead of 127.0.1.1.
 
@@ -142,6 +142,14 @@ pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ````
+**might get waring:** os-prober will not be executed to detect other bootable partitions arch
+
+
+Add a user.
+```
+useradd -m -G wheel -s /bin/bash willy
+passwd willy
+```
 
 
 ### Resource
