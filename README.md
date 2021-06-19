@@ -72,7 +72,7 @@ mount /dev/sda1
 Install essential packages
 Use the pacstrap(8) script to install the base package, Linux kernel and firmware for common hardware:
 ```
-pacstrap /mnt base linux linux-firmware
+pacstrap /mnt base linux linux-firmware intel-ucode vim lvm2
 ```
 
 Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
