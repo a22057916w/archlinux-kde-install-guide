@@ -118,8 +118,9 @@ If the system has a permanent IP address, it should be used instead of 127.0.1.1
 
 Complete the network configuration for the newly installed environment, that may include installing suitable `network management` software.
 ```
-pacman -S networkmanager
+pacman -S networkmanager network-tools openssh wierless_tools wpa_supplicant netctl dialog dhcpcd
 systemctl enable NetworkManager
+systemctl enable sshd
 ```
 
 Initramfs
@@ -138,7 +139,7 @@ mkinitcpio -P linux
 ```
 Bootloader
 ```
-pacman -S grub efibootmgr
+pacman -S grub efibootmgr os-prober
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ````
@@ -162,6 +163,11 @@ KDE
 pacman -s xorg-server xorg-apps xort-xinit
 pacman -S plasma
 pacman -S sddm
+```
+
+Network
+```
+pacman -S network-tools openssh
 ```
 
 ### Resource
