@@ -177,10 +177,16 @@ reboot
 
 
 ```
-pacman -s xf86-video-nouveau
+
 pacman -s xorg-server xorg-apps xort-xinit
+echo "exec startkde" >> ~/.xinitrc
+
+pacman -s xf86-video-nouveau
 
 pacman -S plasma-desktop
+
+pacman -S plasma-pa konsole firefox dolphin
+
 pacman -S sddm
 ```
 
