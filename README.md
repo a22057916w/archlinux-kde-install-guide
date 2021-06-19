@@ -102,7 +102,7 @@ Configuring Locale
 Uncomment the locales you are going to use in `/etc/locale.gen`. Then run:
 ```
 locale-gen
-echo LANG=en_US.UTF-8 >> etc/locale.conf
+echo LANG=en_US.UTF-8 >> /etc/locale.conf
 ```
 
 
