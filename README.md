@@ -72,7 +72,7 @@ mount /dev/sda1
 Install essential packages
 Use the pacstrap(8) script to install the base package, Linux kernel and firmware for common hardware:
 ```
-pacstrap /mnt base linux linux-firmware intel-ucode vim lvm2
+pacstrap /mnt base base-devel linux linux-firmware intel-ucode vim lvm2 
 ```
 
 Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
@@ -124,9 +124,10 @@ If the system has a permanent IP address, it should be used instead of 127.0.1.1
 
 Complete the network configuration for the newly installed environment, that may include installing suitable `network management` software.
 ```
-pacman -S networkmanager network-tools openssh wierless_tools wpa_supplicant netctl dialog dhcpcd
-systemctl enable NetworkManager
-systemctl enable sshd
+pacman -S networkmanager openssh wireless_tools wpa_supplicant netctl dialog dhcpcd
+systemctl enable dhcpcd
+#systemctl enable NetworkManager
+#systemctl enable sshd
 ```
 
 Initramfs
@@ -140,13 +141,12 @@ HOOKS=(base udev ... block lvm2 filesystems)
 ```
 
 ```
-pacman -S lvm2 linux intel-ucode
 mkinitcpio -P linux
 ```
 Bootloader
 ```
 pacman -S grub efibootmgr 
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ````
 **might get waring:** os-prober will not be executed to detect other bootable partitions
@@ -164,17 +164,17 @@ EDITOR=vim visudo
 ```
 Then uncomment `%wheel ALL=(ALL) ALL`.
 
-KDE
+##KDE
+
+
 ```
+pacman -s xf86-video-nouveau
 pacman -s xorg-server xorg-apps xort-xinit
-pacman -S plasma
+
+pacman -S plasma-desktop
 pacman -S sddm
 ```
 
-Network
-```
-pacman -S network-tools openssh
-```
 
 ### Resource
 * [(Other)UEFI? BIOS? Legacy? 淺談主機板UEFI觀念與迷思(轉錄) | by Ryan Lu | AI反斗城 | Medium](https://medium.com/ai%E5%8F%8D%E6%96%97%E5%9F%8E/other-uefi-bios-legacy-%E6%B7%BA%E8%AB%87%E4%B8%BB%E6%A9%9F%E6%9D%BFuefi%E8%A7%80%E5%BF%B5%E8%88%87%E8%BF%B7%E6%80%9D-%E8%BD%89%E9%8C%84-dc86f61b85bd)
