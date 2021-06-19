@@ -164,7 +164,16 @@ EDITOR=vim visudo
 ```
 Then uncomment `%wheel ALL=(ALL) ALL`.
 
-##KDE
+Change root password.
+```
+passwd
+```
+Reboot and check if everything works.
+```
+reboot
+```
+
+## KDE
 
 
 ```
