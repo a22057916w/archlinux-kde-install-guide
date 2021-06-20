@@ -183,7 +183,7 @@ echo "exec startkde" >> ~/.xinitrc
 
 pacman -s xf86-video-nouveau
 
-pacman -S plasma-desktop
+pacman -S plasma
 
 pacman -S plasma-pa konsole firefox dolphin
 
