@@ -46,7 +46,7 @@ vgcreate vg1 /dev/sda3
 vgdisplay
 
 lvcreate -L 50G -n root vg1
-lvcreate -l !))%FREE -n home vg1
+lvcreate -l 100%FREE -n home vg1
 ```
 
 format the partition
@@ -124,10 +124,8 @@ If the system has a permanent IP address, it should be used instead of 127.0.1.1
 
 Complete the network configuration for the newly installed environment, that may include installing suitable `network management` software.
 ```
-pacman -S networkmanager openssh wireless_tools wpa_supplicant netctl dialog dhcpcd
-systemctl enable dhcpcd
-#systemctl enable NetworkManager
-#systemctl enable sshd
+pacman -S networkmanager openssh wireless_tools wpa_supplicant netctl dialog 
+systemctl enable NetworkManager
 ```
 
 Initramfs
@@ -185,9 +183,10 @@ pacman -s xf86-video-nouveau
 
 pacman -S plasma
 
-pacman -S plasma-pa konsole firefox dolphin
+pacman -S dolphin
 
 pacman -S sddm
+systemctl enable sddm
 ```
 
 
