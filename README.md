@@ -6,7 +6,7 @@
 | Kernel | 5.12.8-arch1-1 |
 | Disk Encryption | LVM |
 | Bootloader | GRUB |
-| Wireless | ? |
+| Wireless | plasma-nm |
 | Graphics | xf86-video-nouveau |
 | Backlight | ? |
 | Audio | PulseAudio |
