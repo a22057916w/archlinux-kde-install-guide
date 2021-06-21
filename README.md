@@ -179,11 +179,9 @@ reboot
 pacman -s xorg-server xorg-apps xort-xinit
 echo "exec startkde" >> ~/.xinitrc
 
-pacman -s xf86-video-nouveau
+pacman -s xf86-video-nouveau  --> Nvidia Card Driver
 
 pacman -S plasma
-
-pacman -S dolphin
 
 pacman -S sddm
 systemctl enable sddm
