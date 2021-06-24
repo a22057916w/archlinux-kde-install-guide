@@ -4,7 +4,7 @@
 | --- | --- |
 | Model | ASUS ZenBook UX501J |
 | Kernel | 5.12.8-arch1-1 |
-| Disk Encryption | LVM |
+| Disk Partition | LVM |
 | Bootloader | GRUB |
 | Wireless | plasma-nm |
 | Graphics | xf86-video-nouveau |
