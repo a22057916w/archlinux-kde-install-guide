@@ -94,9 +94,10 @@ Check `lsblk` to ensure everything is properly set.
 ## Base installation
 Install essential packages. Use the `pacstrap script` to install the base package, Linux kernel and firmware for common hardware:
 ```
-pacstrap /mnt base base-devel linux linux-firmware linux-headers intel-ucode lvm2 vim
+pacstrap /mnt base linux linux-firmware base-devel linux-headers intel-ucode lvm2 vim
 ```
 Also, we install the additional packages such like:
+* userspace utilities for the management of file systems that will be used on the system
 * specific firmware for other devices not included in linux-firmware. 
 * packages for [microcode](https://wiki.archlinux.org/title/Microcode) updates, `intel-ucode` or `amd-ucode`.
 * utilities for accessing RAID or LVM partitions.
@@ -153,7 +154,9 @@ Create the hostname file:
 echo "myhostname" >> /etc/hostname
 ```
 Add matching entries to hosts:
-```vim /etc/hosts```
+```
+vim /etc/hosts
+```
 ```
 127.0.0.1	localhost
 ::1		    localhost
@@ -164,20 +167,20 @@ If the system has a permanent IP address, it should be used instead of 127.0.1.1
 
 Complete the network configuration for the newly installed environment, that may include installing suitable `network management` software.
 ```
-pacman -S networkmanager openssh wireless_tools wpa_supplicant netctl dialog 
+pacman -S networkmanager openssh wireless_tools wpa_supplicant netctl dialog dhcpcd
 systemctl enable NetworkManager
 ```
 
 ### Initramfs
-For `LVM`, system encryption or RAID, modify `mkinitcpio.conf` and recreate the initramfs image:
+For `LVM`, system encryption or RAID, modify `mkinitcpio.conf`:
 ```
 vim /etc/mkinitcpio.conf
 ```
-Edit the file and insert lvm2 between block and filesystems like so:
+Edit the file and insert `lvm2` between block and filesystems like so:
 ```
 HOOKS=(base udev ... block lvm2 filesystems)
 ```
-
+Then recreate the initramfs image:
 ```
 mkinitcpio -P linux
 ```
@@ -189,6 +192,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ````
 **might get waring:** os-prober will not be executed to detect other bootable partitions
 
+### Reboot
+Exit the chroot environment by typing `exit` or pressing `Ctrl+d`.
+Optionally manually unmount all the partitions with `umount -R /mnt`: this allows noticing any "busy" partitions, and finding the cause with fuser.
+Finally, restart the machine by typing `reboot`: any partitions still mounted will be automatically unmounted by systemd. Remember to login into the new system with the root account.
 
 Add a user.
 ```
