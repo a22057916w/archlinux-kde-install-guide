@@ -184,6 +184,12 @@ Then recreate the initramfs image:
 ```
 mkinitcpio -P linux
 ```
+
+### Change root password.
+```
+passwd
+```
+
 ### Bootloader
 Choose **GRUB** as a Linux-capable [boot loader](https://wiki.archlinux.org/title/Arch_boot_process#Boot_loader).
 ```
@@ -202,8 +208,8 @@ Finally, restart the machine by typing `reboot`: any partitions still mounted wi
 ## Post-installation
 ### Add a user.
 ```
-useradd -m -G wheel -s /bin/bash willy
-passwd willy
+useradd -m -G wheel -s /bin/bash <username>
+passwd <username>
 ```
 
 ### Setup sudo.
@@ -212,18 +218,12 @@ EDITOR=vim visudo
 ```
 Then uncomment `%wheel ALL=(ALL) ALL`.
 
-### Change root password.
-```
-passwd
-```
 Reboot and check if everything works.
 ```
 reboot
 ```
 
 ## Desktop Environment - KDE Plasma
-
-
 ```
 
 pacman -s xorg-server xorg-apps xort-xinit
