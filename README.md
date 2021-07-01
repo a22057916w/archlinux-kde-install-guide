@@ -65,26 +65,29 @@ vgdisplay
 lvcreate -L 50G -n root vg1
 lvcreate -l 100%FREE -n home vg1
 ```
-
-Format the partition as follow:
+### Format the partitions
+Once the partitions have been created, each newly created partition must be formatted with an appropriate [file system](https://wiki.archlinux.org/title/File_systems).
 ```
-mkfs.fat -F32 /dev/sda1
-mkswap /dev/sda2
+mkfs.fat -F32 /dev/sda1           --> EFI formation 
+mkswap /dev/sda2                  --> swap initalization
 
 mkfs.ext4 /dev/vg1/root
 mkfs.ext4 /dev/vg1/home
 mkfs.ext4 /dev/sdb1
 ```
 
-Mount the partition as follow:
+### Mount the file systems
+Mount the root volume to /mnt. Then create any remaining mount points (such as /mnt/home) and mount their corresponding volumes.
 ```
-swapon /dev/sda2                  --> enable swap session
-
 mount /dev/vg1/root /mnt
+
 mkdir -p /mnt/home
 mount /dev/vg1/home /mnt/home
+
 mkdir -p /mnt/boot/EFI
 mount /dev/sda1 /mnt/boot/EFI
+
+swapon /dev/sda2                  --> enable swap session
 ```
 Check `lsblk` to ensure everything is properly set.
 
@@ -126,17 +129,16 @@ Change root into the new system:
 ```
 arch-chroot /mnt
 ```
-
 ### Time zone
 Set the time zone:
 ```
 ln -sf /usr/share/zoneinfo/Asia/Taiwan /etc/localtime
 ```
-Run hwclock(8) to generate /etc/adjtime:
+Run hwclock to generate /etc/adjtime:
 ```
 hwclock --systohc
 ```
-check ```date```
+check `date` for status.
 
 ### Configuring Locale
 Uncomment the locales you are going to use in `/etc/locale.gen`. Then run:
