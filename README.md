@@ -172,7 +172,7 @@ systemctl enable NetworkManager
 ```
 
 ### Initramfs
-For `LVM`, system encryption or RAID, modify `mkinitcpio.conf`:
+For [LVM](https://wiki.archlinux.org/title/Install_Arch_Linux_on_LVM#Adding_mkinitcpio_hooks), system encryption or RAID, modify `mkinitcpio.conf`:
 ```
 vim /etc/mkinitcpio.conf
 ```
@@ -221,7 +221,7 @@ Reboot and check if everything works.
 reboot
 ```
 
-## Desktop Environment - KDE Plasm
+## Desktop Environment - KDE Plasma
 
 
 ```
