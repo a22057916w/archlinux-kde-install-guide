@@ -78,7 +78,7 @@ mkfs.ext4 /dev/sdb1
 
 Mount the partition
 ```
-swapon /dev/sda2
+swapon /dev/sda2                  --> enable swap session
 
 mount /dev/vg1/root /mnt
 mkdir -p /mnt/home
