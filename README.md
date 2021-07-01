@@ -38,6 +38,7 @@ To check the service status, use ```timedatectl status```.
 
 
 ## PARTITION with LVM
+Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition the drive. Then run
 ```
 pvcreate /dev/sda3
 pvdisplay
