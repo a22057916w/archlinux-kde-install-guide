@@ -12,9 +12,9 @@
 | Audio | PulseAudio |
 
 ## Pre-installation
-Secure Boot Control -> disable
+This guide is based on `UEFI` system.
+Download the [latest boot image](https://archlinux.org/download/) and make a Live USB. TO BIOS setting, disable the Secure Boot Control, the function will be automatically maintained by Arch Linux Kernel after completing the installation. Then boot with the Live USB.
 
-Tip: The installation image uses systemd-boot for booting in UEFI mode and syslinux for booting in BIOS mode. See README.bootparams for a list of boot parameters.
 
 make sure you have booted in UEFI mode by checking efi directory
 ```
