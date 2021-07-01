@@ -185,7 +185,7 @@ Then recreate the initramfs image:
 mkinitcpio -P linux
 ```
 ### Bootloader
-Choose GRUB as a Linux-capable [boot loader](https://wiki.archlinux.org/title/Arch_boot_process#Boot_loader).
+Choose **GRUB** as a Linux-capable [boot loader](https://wiki.archlinux.org/title/Arch_boot_process#Boot_loader).
 ```
 pacman -S grub efibootmgr 
 grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
