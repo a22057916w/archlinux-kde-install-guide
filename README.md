@@ -83,9 +83,11 @@ swapon /dev/sda2                  --> enable swap session
 mount /dev/vg1/root /mnt
 mkdir -p /mnt/home
 mount /dev/vg1/home /mnt/home
-mkdir -p /mnt/boot
-mount /dev/sda1 
+mkdir -p /mnt/boot/EFI
+mount /dev/sda1 /mnt/boot/EFI
 ```
+Check `lsblk` to ensure everything is properly set.
+
 Install essential packages
 Use the pacstrap(8) script to install the base package, Linux kernel and firmware for common hardware:
 ```
