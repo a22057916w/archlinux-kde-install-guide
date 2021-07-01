@@ -37,7 +37,7 @@ To check the service status, use ```timedatectl status```.
 
 
 
-## PARTITION with LVM
+## Partition with LVM
 Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition according to the [office guide](https://wiki.archlinux.org/title/Installation_guide#Partition_the_disks). However, I suggest part the root for 40G at least if one tries to install KDE Plasma. Note that we are refering to `UEFI with GPT`. 
 
 After completing all steps, my `lsblk` output as follow:
@@ -147,20 +147,19 @@ locale-gen
 echo LANG=en_US.UTF-8 >> /etc/locale.conf
 ```
 
-
 ### Network configuration
 Create the hostname file:
 ```
-echo "willylaptop" >> /etc/hostname
+echo "myhostname" >> /etc/hostname
 ```
-Add matching entries to hosts(5):
+Add matching entries to hosts:
 ```
 vim /etc/hosts
 ```
 ```
 127.0.0.1	localhost
 ::1		localhost
-127.0.1.1	willylaptop.localdomain	willylaptop
+127.0.1.1	myhostname.localdomain	myhostname
 ```
 If the system has a permanent IP address, it should be used instead of 127.0.1.1.
 
@@ -170,7 +169,7 @@ pacman -S networkmanager openssh wireless_tools wpa_supplicant netctl dialog
 systemctl enable NetworkManager
 ```
 
-Initramfs
+### Initramfs
 For `LVM`, system encryption or RAID, modify `mkinitcpio.conf` and recreate the initramfs image:
 ```
 vim /etc/mkinitcpio.conf
@@ -183,7 +182,7 @@ HOOKS=(base udev ... block lvm2 filesystems)
 ```
 mkinitcpio -P linux
 ```
-Bootloader
+### Bootloader
 ```
 pacman -S grub efibootmgr 
 grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
