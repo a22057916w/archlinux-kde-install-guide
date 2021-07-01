@@ -192,26 +192,27 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ````
 **might get waring:** os-prober will not be executed to detect other bootable partitions
 
-### Reboot
+## Reboot
 Exit the chroot environment by typing `exit` or pressing `Ctrl+d`.
 
 Optionally manually unmount all the partitions with `umount -R /mnt`: this allows noticing any "busy" partitions, and finding the cause with [fuser](https://man.archlinux.org/man/fuser.1).
 
 Finally, restart the machine by typing `reboot`: any partitions still mounted will be automatically unmounted by systemd. Remember to login into the new system with the root account.
 
-Add a user.
+## Post-installation
+### Add a user.
 ```
 useradd -m -G wheel -s /bin/bash willy
 passwd willy
 ```
 
-Setup sudo.
+### Setup sudo.
 ```
 EDITOR=vim visudo
 ```
 Then uncomment `%wheel ALL=(ALL) ALL`.
 
-Change root password.
+### Change root password.
 ```
 passwd
 ```
@@ -220,7 +221,7 @@ Reboot and check if everything works.
 reboot
 ```
 
-## KDE
+## Desktop Environment - KDE Plasm
 
 
 ```
