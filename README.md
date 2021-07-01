@@ -38,7 +38,7 @@ To check the service status, use ```timedatectl status```.
 
 
 ## PARTITION with LVM
-Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition the drive. Then run
+Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition according to the [office guide](https://wiki.archlinux.org/title/Installation_guide#Partition_the_disks). 
 ```
 NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 sda            8:0    0 119.2G  0 disk 
