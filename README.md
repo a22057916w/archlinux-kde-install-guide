@@ -66,7 +66,7 @@ lvcreate -L 50G -n root vg1
 lvcreate -l 100%FREE -n home vg1
 ```
 
-Format the partition
+Format the partition as follow:
 ```
 mkfs.fat -F32 /dev/sda1
 mkswap /dev/sda2
@@ -76,7 +76,7 @@ mkfs.ext4 /dev/vg1/home
 mkfs.ext4 /dev/sdb1
 ```
 
-Mount the partition
+Mount the partition as follow:
 ```
 swapon /dev/sda2                  --> enable swap session
 
@@ -88,12 +88,18 @@ mount /dev/sda1 /mnt/boot/EFI
 ```
 Check `lsblk` to ensure everything is properly set.
 
-Install essential packages
-Use the pacstrap(8) script to install the base package, Linux kernel and firmware for common hardware:
+## Base installation
+Install essential packages. Use the `pacstrap script` to install the base package, Linux kernel and firmware for common hardware:
 ```
-pacstrap /mnt base base-devel linux linux-firmware linux-headers intel-ucode vim lvm2 
+pacstrap /mnt base base-devel linux linux-firmware linux-headers intel-ucode lvm2 vim
 ```
+Also, we install the additional packages such like:
+* specific firmware for other devices not included in linux-firmware. 
+* [microcode updates](https://wiki.archlinux.org/title/Microcode), `intel-ucode` or `amd-ucode`
+* utilities for accessing RAID or LVM partitions.
+* a text editor.
 
+## Configure the system
 Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
 ```
 genfstab -U /mnt >> /mnt/etc/fstab
