@@ -53,6 +53,8 @@ sdb            8:16   0 931.5G  0 disk
 └─sdb1         8:17   0 931.5G  0 part /data
 
 ```
+
+Create the LVM on root and home partition as follow:
 ```
 pvcreate /dev/sda3
 pvdisplay
