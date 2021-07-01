@@ -13,7 +13,7 @@
 
 ## Pre-installation
 This guide is based on `UEFI` system.
-Download the [latest boot image](https://archlinux.org/download/) and make a Live USB. TO BIOS setting, disable the Secure Boot Control, the function will be automatically maintained by Arch Linux Kernel after completing the installation. Then boot with the Live USB.
+Download the [latest boot image](https://archlinux.org/download/) and make a Live USB. To BIOS setting, disable the Secure Boot Control, the function will be automatically maintained by Arch Linux Kernel after completing the installation. Then boot with the Live USB.
 
 
 make sure you have booted in UEFI mode by checking efi directory
