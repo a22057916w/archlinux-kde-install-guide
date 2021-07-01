@@ -100,6 +100,7 @@ Also, we install the additional packages such like:
 * a text editor.
 
 ## Configure the system
+### Fstab
 Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
 ```
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -120,13 +121,13 @@ UUID=A289-1408          /boot/EFI       vfat            rw,relatime,fmask=0022,d
 UUID=fcb0c78c-6d9d-4f36-825f-2da2ab50064f       /data           ext4            rw,relatime     0 2
 ```
 
-Chroot
+### Chroot
 Change root into the new system:
 ```
 arch-chroot /mnt
 ```
 
-Time zone
+### Time zone
 Set the time zone:
 ```
 ln -sf /usr/share/zoneinfo/Asia/Taiwan /etc/localtime
@@ -137,7 +138,7 @@ hwclock --systohc
 ```
 check ```date```
 
-Configuring Locale
+### Configuring Locale
 Uncomment the locales you are going to use in `/etc/locale.gen`. Then run:
 ```
 locale-gen
@@ -145,7 +146,7 @@ echo LANG=en_US.UTF-8 >> /etc/locale.conf
 ```
 
 
-Network configuration
+### Network configuration
 Create the hostname file:
 ```
 echo "willylaptop" >> /etc/hostname
