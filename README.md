@@ -38,7 +38,7 @@ To check the service status, use ```timedatectl status```.
 
 
 ## PARTITION with LVM
-Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition according to the [office guide](https://wiki.archlinux.org/title/Installation_guide#Partition_the_disks)(Note that we are refering to `UEFI with GPT`). 
+Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition according to the [office guide](https://wiki.archlinux.org/title/Installation_guide#Partition_the_disks). Note that we are refering to `UEFI with GPT`. 
 ```
 NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 sda            8:0    0 119.2G  0 disk 
