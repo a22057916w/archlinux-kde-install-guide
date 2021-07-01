@@ -95,7 +95,7 @@ pacstrap /mnt base base-devel linux linux-firmware linux-headers intel-ucode lvm
 ```
 Also, we install the additional packages such like:
 * specific firmware for other devices not included in linux-firmware. 
-* [microcode](https://wiki.archlinux.org/title/Microcode) updates, `intel-ucode` or `amd-ucode`
+* packages for [microcode](https://wiki.archlinux.org/title/Microcode) updates, `intel-ucode` or `amd-ucode`.
 * utilities for accessing RAID or LVM partitions.
 * a text editor.
 
@@ -104,7 +104,7 @@ Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
 ```
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
-check ```cat /mnt/etc/fstab```
+check `cat /mnt/etc/fstab` result, mine is like:
 
 Chroot
 Change root into the new system:
