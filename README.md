@@ -105,6 +105,20 @@ Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 check `cat /mnt/etc/fstab` result, mine is like:
+```
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/mapper/vg1-root
+UUID=66ddf5be-051c-4e31-9774-34c14b2c8d9f       /               ext4            rw,relatime     0 1
+
+# /dev/mapper/vg1-home
+UUID=31af8d33-2f65-4b6e-80f8-3345a2699af1       /home           ext4            rw,relatime     0 2
+
+# /dev/sda1
+UUID=A289-1408          /boot/EFI       vfat            rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro     0 2
+
+# /dev/sdb1
+UUID=fcb0c78c-6d9d-4f36-825f-2da2ab50064f       /data           ext4            rw,relatime     0 2
+```
 
 Chroot
 Change root into the new system:
