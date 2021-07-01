@@ -40,6 +40,18 @@ To check the service status, use ```timedatectl status```.
 ## PARTITION with LVM
 Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition the drive. Then run
 ```
+NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda            8:0    0 119.2G  0 disk 
+├─sda1         8:1    0   512M  0 part /boot/EFI
+├─sda2         8:2    0     2G  0 part [SWAP]
+└─sda3         8:3    0 116.7G  0 part 
+  ├─vg1-root 254:0    0    50G  0 lvm  /
+  └─vg1-home 254:1    0  66.7G  0 lvm  /home
+sdb            8:16   0 931.5G  0 disk 
+└─sdb1         8:17   0 931.5G  0 part /data
+
+```
+```
 pvcreate /dev/sda3
 pvdisplay
 
