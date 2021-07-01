@@ -40,7 +40,7 @@ To check the service status, use ```timedatectl status```.
 ## Partition with LVM
 Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition according to the [office guide](https://wiki.archlinux.org/title/Installation_guide#Partition_the_disks). However, I suggest part the root for 40G at least if one tries to install KDE Plasma. Note that we are refering to `UEFI with GPT`. 
 
-After completing all steps, my `lsblk` output as follow:
+After completing all steps, my `lsblk` output is as follow:
 ```
 NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 sda            8:0    0 119.2G  0 disk 
@@ -54,7 +54,7 @@ sdb            8:16   0 931.5G  0 disk
 
 ```
 
-Create the LVM on root and home partition as follow:
+Create the LVM on root and home partitions as following steps:
 ```
 pvcreate /dev/sda3
 pvdisplay
@@ -185,12 +185,12 @@ Then recreate the initramfs image:
 mkinitcpio -P linux
 ```
 ### Bootloader
+Choose GRUB as a Linux-capable [boot loader](https://wiki.archlinux.org/title/Arch_boot_process#Boot_loader).
 ```
 pacman -S grub efibootmgr 
 grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ````
-**might get waring:** os-prober will not be executed to detect other bootable partitions
 
 ## Reboot
 Exit the chroot environment by typing `exit` or pressing `Ctrl+d`.
