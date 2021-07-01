@@ -39,6 +39,7 @@ To check the service status, use ```timedatectl status```.
 
 ## PARTITION with LVM
 Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition according to the [office guide](https://wiki.archlinux.org/title/Installation_guide#Partition_the_disks). However, I suggest part the root for 40G at least if one tries to install KDE Plasma. Note that we are refering to `UEFI with GPT`. 
+
 After completing all steps, my `lsblk` output as follow.
 ```
 NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
