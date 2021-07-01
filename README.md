@@ -153,8 +153,8 @@ Create the hostname file:
 echo "myhostname" >> /etc/hostname
 ```
 Add matching entries to hosts:
-<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">vim /etc/hosts</pre>
-<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">127.0.0.1	localhost
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0;">vim /etc/hosts</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0;">127.0.0.1	localhost
 ::1		localhost
 127.0.1.1	<i>myhostname</i>.<i>localdomain</i>	<i>myhostname</i>
 </pre>
