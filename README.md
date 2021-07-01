@@ -95,7 +95,7 @@ pacstrap /mnt base base-devel linux linux-firmware linux-headers intel-ucode lvm
 ```
 Also, we install the additional packages such like:
 * specific firmware for other devices not included in linux-firmware. 
-* [microcode updates](https://wiki.archlinux.org/title/Microcode), `intel-ucode` or `amd-ucode`
+* [microcode](https://wiki.archlinux.org/title/Microcode) updates, `intel-ucode` or `amd-ucode`
 * utilities for accessing RAID or LVM partitions.
 * a text editor.
 
