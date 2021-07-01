@@ -138,7 +138,7 @@ Run hwclock to generate /etc/adjtime:
 ```
 hwclock --systohc
 ```
-check `date` for status.
+run `date` to check status.
 
 ### Configuring Locale
 Uncomment the locales you are going to use in `/etc/locale.gen`. Then run:
@@ -153,6 +153,11 @@ Create the hostname file:
 echo "myhostname" >> /etc/hostname
 ```
 Add matching entries to hosts:
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">vim /etc/hosts</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">127.0.0.1	localhost
+::1		localhost
+127.0.1.1	<i>myhostname</i>.<i>localdomain</i>	<i>myhostname</i>
+</pre>
 ```
 vim /etc/hosts
 ```
