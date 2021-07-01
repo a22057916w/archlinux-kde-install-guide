@@ -104,7 +104,7 @@ Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
 ```
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
-check `cat /mnt/etc/fstab` result, mine is like:
+`cat /mnt/etc/fstab` to check if it works, mine is like:
 ```
 # <file system> <dir> <type> <options> <dump> <pass>
 # /dev/mapper/vg1-root
