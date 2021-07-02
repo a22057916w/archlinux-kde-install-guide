@@ -244,7 +244,7 @@ systemctl enable sddm
 ```
 ## 中文化
 
-輸入法框架((input method framework)
+輸入法框架(input method framework)
 
 Set environment variables for IM modules
 Define the environment variables to register the input method modules. Without these variables, applications may fallback to XIM protocol, except for qt5 applications which do not have XIM support and require an IM module in place.
