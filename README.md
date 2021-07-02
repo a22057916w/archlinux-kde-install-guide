@@ -276,7 +276,8 @@ Most desktop environments include a [display manager](https://wiki.archlinux.org
 pacman -S sddm
 systemctl enable sddm
 ```
-Reboot the machine, and one should now have a GUI on the Arch Linux.
+Reboot the machine, and one should now have a GUI on Arch Linux, similar to the following picture.
+[.](https://github.com/a22057916w/archlinux-kde-install-guide/blob/main/.meta/desktop.png)
 
 ## 中文化
 
