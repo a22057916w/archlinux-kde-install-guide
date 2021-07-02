@@ -226,7 +226,7 @@ reboot
 
 Here I would install **Xorg** since the vast majority of native applications that exist were written for Xorg now.
 ```
-pacman -s xorg-server xorg-apps xort-xinit
+pacman -S xorg-server xorg-apps xort-xinit
 echo "exec startkde" >> ~/.xinitrc
 ```
 One can find the diffrence between Xorg and Wayland by refering to the [Xorg, X11, Wayland? Linux Display Servers And Protocols Explained](https://linuxiac.com/xorg-x11-wayland-linux-display-servers-and-protocols-explained/)
@@ -234,7 +234,7 @@ One can find the diffrence between Xorg and Wayland by refering to the [Xorg, X1
 ### Display drivers
 Install the appropriate driver for [AMD or NVIDIA](https://wiki.archlinux.org/title/Xorg#Driver_installation) products.
 ```
-pacman -s xf86-video-nouveau  --> Nvidia Card Driver
+pacman -S xf86-video-nouveau  --> Nvidia Card Driver
 ```
 ### Desktop Environment - KDE Plasma
 In Arch Linux, you can install Plasma 5 in three ways:
