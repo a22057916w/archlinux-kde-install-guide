@@ -248,7 +248,7 @@ pacman -S plasma
 ```
 
 ### Install some key applications
-One will need to install some essential utilities. Here are the ones I have chosen:
+Still, we will need to install some essential utilities. Here are the ones I have chosen:
 * Web Browser: I will be using **firefox** here.
 * Network Manager: Kde has a package named **plasma-nm** which is included in package `plasma`, that one can use to connect to a network (Wifi/Ethernet).
 * Audio: `plasma` also include a package named **plasma-pa**, which is [PulseAudio](https://linuxhint.com/guide_linux_audio/) integrating for Plasma desktop.
