@@ -249,13 +249,14 @@ pacman -S plasma
 
 ### Install some key applications
 Still, we will need to install some essential utilities. Here are the ones I have chosen:
-* Web Browser: I will be using **firefox** here.
-* Network Manager: Kde has a package named **plasma-nm** which is included in package `plasma`, that one can use to connect to a network (Wifi/Ethernet).
+* Web Browser: I would using **firefox** here.
+* Network Manager: Kde has a package named **plasma-nm** which is included in `plasma`, that one can use to connect to a network (Wifi/Ethernet).
 * Audio: `plasma` also include a package named **plasma-pa**, which is [PulseAudio](https://linuxhint.com/guide_linux_audio/) integrating for Plasma desktop.
 * File Manager: **Dolphin** is the file manager that I prefer to install.
-* Terminal: As for terminal, I will be installing **Konsole**. It is the default terminal app for KDE.
+* Terminal: As for terminal, I would install **Konsole**. It is the default terminal app for KDE.
+* Screenshot capturer: I would install **Spectacle**. It is a utillity for KDE.
 ```
-pacman -S firefox dolphin konsole 
+pacman -S firefox dolphin konsole spectable
 ```
 Then, configure the `networkmanager` for plasma-nm. Disable the original connection. For example, I used `dhcpcd` for the Ethernet connection.
 ```
