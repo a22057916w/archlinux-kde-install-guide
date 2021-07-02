@@ -233,13 +233,14 @@ pacman -s xorg-server xorg-apps xort-xinit
 echo "exec startkde" >> ~/.xinitrc
 ```
 One can find the diffrence between Xorg and Wayland by refering to the [Xorg, X11, Wayland? Linux Display Servers And Protocols Explained](https://linuxiac.com/xorg-x11-wayland-linux-display-servers-and-protocols-explained/)
+
 ### Display drivers
+Installing the appropriate driver for [AMD or NVIDIA](https://wiki.archlinux.org/title/Xorg#Driver_installation) products.
 ```
 pacman -s xf86-video-nouveau  --> Nvidia Card Driver
 ```
 ### Desktop Environment - KDE Plasma
 ```
-
 pacman -S plasma
 ```
 ### Display manager
