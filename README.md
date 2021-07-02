@@ -222,17 +222,23 @@ Reboot and check if everything works.
 ```
 reboot
 ```
-
-## Desktop Environment - KDE Plasma
+## Graphical user interface
+### Display server
 ```
-
 pacman -s xorg-server xorg-apps xort-xinit
 echo "exec startkde" >> ~/.xinitrc
-
+```
+### Display drivers
+```
 pacman -s xf86-video-nouveau  --> Nvidia Card Driver
+```
+### Desktop Environment - KDE Plasma
+```
 
 pacman -S plasma
-
+```
+### Display manager
+```
 pacman -S sddm
 systemctl enable sddm
 ```
