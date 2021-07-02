@@ -241,7 +241,7 @@ pacman -s xf86-video-nouveau  --> Nvidia Card Driver
 ```
 ### Desktop Environment - KDE Plasma
 In Arch Linux, you can install Plasma 5 in three ways:
-* plasma-desktop          --> minimun weight
+* plasma-desktop                --> minimun weight
 * plasma 
 * plasma-meta             
 ```
