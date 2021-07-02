@@ -33,10 +33,6 @@ timedatectl set-ntp true
 ```
 To check the service status, use ```timedatectl status```.
 
-
-
-
-
 ## Partition with LVM
 Use `cfdisk`, `cgdisk`, `fdisk` or whatever tools you like to partition according to the [office guide](https://wiki.archlinux.org/title/Installation_guide#Partition_the_disks). However, I suggest part the root for 40G at least if one tries to install [KDE Plasma](https://kde.org/). Note that we are refering to `UEFI with GPT`. 
 
@@ -252,9 +248,9 @@ pacman -S plasma
 
 ### Install some key applications
 One will need to install some essential utilities. Here are the ones I have chosen:
-* Web Browser: I will be using firefox here.
+* Web Browser: I will be using **firefox** here.
 * Network Manager: Kde has a package named **plasma-nm** which is included in package `plasma`, that one can use to connect to a network (Wifi/Ethernet).
-* Audio: The package plasma also include a package named **plasma-pa**, which is [PulseAudio](https://linuxhint.com/guide_linux_audio/) integrating for Plasma desktop.
+* Audio: `plasma` also include a package named **plasma-pa**, which is [PulseAudio](https://linuxhint.com/guide_linux_audio/) integrating for Plasma desktop.
 * File Manager: **Dolphin** is the file manager that I prefer to install.
 * Terminal: As for terminal, I will be installing **Konsole**. It is the default terminal app for KDE.
 ```
@@ -265,17 +261,21 @@ Then, configure the `networkmanager` for plasma-nm. Disable the original connect
 systemctl stop dhcpcd
 systemctl disable dhcpcd
 ```
-Enable the NetworkManager
+Enable the `NetworkManager`
 ```
 systemctl enable NetworkManager
 systemctl start NetworkManager
 ```
 
 ### Display manager
+Most desktop environments include a [display manager](https://wiki.archlinux.org/title/Display_manager) for automatically starting the graphical environment and managing user logins.
+
+[SDDM](https://wiki.archlinux.org/title/SDDM) is recommended for KDE Plasma.
 ```
 pacman -S sddm
 systemctl enable sddm
 ```
+Reboot the machine, and one should now have a GUI on the Arch Linux.
 
 ## 中文化
 
