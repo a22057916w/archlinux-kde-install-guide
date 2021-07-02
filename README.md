@@ -243,15 +243,40 @@ pacman -s xf86-video-nouveau  --> Nvidia Card Driver
 In Arch Linux, you can install Plasma 5 in three ways:
 * plasma-desktop                --> minimun weight
 * plasma 
-* plasma-meta             
+* plasma-meta
+
+I would install a medium weight `plasma` since it contains the most essential packages and is friendly for new beginners of Linux.
 ```
 pacman -S plasma
 ```
+
+### Install some key applications
+One will need to install some essential utilities. Here are the ones I have chosen:
+* Web Browser: I will be using firefox here.
+* Network Manager: Kde has a package named **plasma-nm** which is included in package `plasma`, that one can use to connect to a network (Wifi/Ethernet).
+* Audio: The package plasma also include a package named **plasma-pa**, which is [PulseAudio](https://linuxhint.com/guide_linux_audio/) integrating for Plasma desktop.
+* File Manager: **Dolphin** is the file manager that I prefer to install.
+* Terminal: As for terminal, I will be installing **Konsole**. It is the default terminal app for KDE.
+```
+pacman -S firefox dolphin konsole 
+```
+Then, configure the `networkmanager` for plasma-nm. Disable the original connection. For example, I used `dhcpcd` for the Ethernet connection.
+```
+systemctl stop dhcpcd
+systemctl disable dhcpcd
+```
+Enable the NetworkManager
+```
+systemctl enable NetworkManager
+systemctl start NetworkManager
+```
+
 ### Display manager
 ```
 pacman -S sddm
 systemctl enable sddm
 ```
+
 ## 中文化
 
 輸入法框架(input method framework)
