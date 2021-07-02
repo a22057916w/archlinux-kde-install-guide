@@ -1,4 +1,5 @@
 ## Synopsis
+My personal Arch configuration on my notebook. Feel free to try it.
 
 | Item | Detail |
 | --- | --- |
