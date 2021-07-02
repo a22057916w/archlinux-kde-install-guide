@@ -224,10 +224,10 @@ reboot
 ```
 ## Graphical user interface
 ### Display server
-[Xorg](https://wiki.archlinux.org/title/Xorg) is the public, open-source implementation of the X Window System (commonly X11, or X). It is required for running applications with graphical user interfaces (GUIs), and the majority of users will want to install it.<br>
+[Xorg](https://wiki.archlinux.org/title/Xorg) is the public, open-source implementation of the [X Window System](https://en.wikipedia.org/wiki/X_Window_System) (commonly X11, or X). It is required for running applications with graphical user interfaces (GUIs), and the majority of users will want to install it.<br>
 [Wayland](https://wiki.archlinux.org/title/Wayland) is a newer, alternative display server protocol and the Weston reference implementation is available.
 
-Here I would install **Xorg** since the vast majority of native applications that exist were written for Xorg for now.
+Here I would install **Xorg** since the vast majority of native applications that exist were written for Xorg now.
 ```
 pacman -s xorg-server xorg-apps xort-xinit
 echo "exec startkde" >> ~/.xinitrc
