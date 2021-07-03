@@ -9,7 +9,6 @@ My personal Arch configuration on my notebook. Feel free to try it.
 | Bootloader | GRUB |
 | Wireless | plasma-nm |
 | Graphics | xf86-video-nouveau |
-| Backlight | ? |
 | Audio | PulseAudio |
 
 ## Pre-installation
