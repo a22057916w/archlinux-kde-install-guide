@@ -87,7 +87,7 @@ swapon /dev/sda2                  --> enable swap session
 ```
 Check `lsblk` to ensure everything is properly set.
 
-## Base installation
+## Base Installation
 Install essential packages. Use the `pacstrap script` to install the base package, Linux kernel and firmware for common hardware:
 ```
 pacstrap /mnt base linux linux-firmware base-devel linux-headers intel-ucode lvm2 vim
@@ -201,7 +201,7 @@ Optionally manually unmount all the partitions with `umount -R /mnt`: this allow
 
 Finally, restart the machine by typing `reboot`: any partitions still mounted will be automatically unmounted by systemd. Remember to login into the new system with the root account.
 
-## Post-installation
+## Post-Installation
 ### Add a user.
 ```
 useradd -m -G wheel -s /bin/bash <username>
@@ -218,7 +218,7 @@ Reboot and check if everything works.
 ```
 reboot
 ```
-## Graphical user interface
+## Graphical User Interface
 ### Display server
 [Xorg](https://wiki.archlinux.org/title/Xorg) is the public, open-source implementation of the [X Window System](https://en.wikipedia.org/wiki/X_Window_System) (commonly X11, or X). It is required for running applications with graphical user interfaces (GUIs), and the majority of users will want to install it.<br>
 [Wayland](https://wiki.archlinux.org/title/Wayland) is a newer, alternative display server protocol and the Weston reference implementation is available.
@@ -278,7 +278,7 @@ systemctl enable sddm
 Reboot and login to the system. You should now have a GUI on Arch Linux, similar to the following picture.<br><br>
 ![](https://github.com/a22057916w/archlinux-kde-install-guide/blob/main/.meta/desktop.png)
 
-### Additional Applications
+### Additional applications
 Apart from the essential packages that I have mentioned, you might want to install some other programs that you will need. Here are the ones I have chosen:
 * Screenshot Capturer: **Spectacle** is a utillity for KDE.
 * Video Player : **KMPlayer** is a simple, multi-platform video player.
