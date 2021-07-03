@@ -281,7 +281,11 @@ Reboot and login to the system. You should now have a GUI on Arch Linux, similar
 
 ### Additional Applications
 Apart from the essential packages that I have mentioned, you might want to install some other programs that you will need.
-* Screenshot Capturer: I would install **Spectacle**. It is a utillity for KDE.
+* Screenshot Capturer: **Spectacle** is a utillity for KDE.
+* Video Player : **KMPlayer** is a simple, multi-platform video player.
+* Photo Viewer : **digiKam** is mainly developed for KDE but is a little heavy since it supports many features like editor, organizer, etc.
+* Text Editor : **Kate** works good on KDE and has multi-tab support.
+* [AUR Helper](https://wiki.archlinux.org/title/Arch_User_Repository) : yay/pamac (for cli, yay and for GUI pamac. Pamac can also be used as a software manager for normal package)
 
 
 ## 中文化
