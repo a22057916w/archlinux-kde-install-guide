@@ -261,7 +261,7 @@ Then, configure the `networkmanager` for plasma-nm. Disable the original connect
 systemctl stop dhcpcd
 systemctl disable dhcpcd
 ```
-Enable the `NetworkManager`
+Enable or restart the `NetworkManager`
 ```
 systemctl enable NetworkManager
 systemctl start NetworkManager
