@@ -254,7 +254,6 @@ Still, we will need to install some essential utilities. Here are the ones I hav
 * Audio: `plasma` also include a package named **plasma-pa**, which is [PulseAudio](https://linuxhint.com/guide_linux_audio/) integrating for Plasma desktop.
 * File Manager: **Dolphin** is the file manager that I prefer to install.
 * Terminal: As for terminal, I would install **Konsole**. It is the default terminal app for KDE.
-* Screenshot Capturer: I would install **Spectacle**. It is a utillity for KDE.
 ```
 pacman -S firefox dolphin konsole spectacle
 ```
@@ -279,6 +278,11 @@ systemctl enable sddm
 ```
 Reboot and login to the system. You should now have a GUI on Arch Linux, similar to the following picture.<br><br>
 ![](https://github.com/a22057916w/archlinux-kde-install-guide/blob/main/.meta/desktop.png)
+
+### Additional Applications
+Apart from the essential packages that I have mentioned, you might want to install some other programs that you will need.
+* Screenshot Capturer: I would install **Spectacle**. It is a utillity for KDE.
+
 
 ## 中文化
 
