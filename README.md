@@ -5,7 +5,7 @@ My personal Arch configuration on my notebook. Feel free to try it.
 | - | :---: |
 | Model | ASUS ZenBook UX501J |
 | Kernel | 5.12.8-arch1-1 |
-| Disk Partition | LVM |
+| Disk Partition | [LVM](https://opensource.com/business/16/9/linux-users-guide-lvm) |
 | Bootloader | GRUB |
 | Wireless | plasma-nm |
 | Graphics | xf86-video-nouveau |
