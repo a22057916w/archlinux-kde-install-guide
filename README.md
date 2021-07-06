@@ -2,7 +2,7 @@
 My personal Arch configuration on my notebook. Feel free to try it.
 
 | Item | Detail |
-| --- | --- |
+| - | :---: |
 | Model | ASUS ZenBook UX501J |
 | Kernel | 5.12.8-arch1-1 |
 | Disk Partition | LVM |
