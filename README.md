@@ -1,5 +1,5 @@
 ## Synopsis
-My personal Arch configuration on my notebook. Feel free to try it.
+My personal Arch Linux configuration on my notebook. Feel free to try it.
 
 | Item | Detail |
 | - | :---: |
