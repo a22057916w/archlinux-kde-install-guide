@@ -1,0 +1,3 @@
+#!/bin/sh
+# Xsetup - run as root before the login dialog appears
+xrandr  --output eDP-1 --mode 1920x1080
