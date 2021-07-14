@@ -281,12 +281,12 @@ Reboot and login to the system. You should now have a GUI on Arch Linux, similar
 ### Additional applications
 Apart from the essential packages that I have mentioned, you might want to install some other programs that you will need. Here are the ones I have chosen:
 * Screenshot Capturer: **Spectacle** is a utillity for KDE.
-* Video Player : **KMPlayer** is a simple, multi-platform video player.
+* Video Player : I find **VLC** the best open source video player on both Linux and Windows.
 * Photo Viewer : **digiKam** is mainly developed for KDE, but is a little heavy since it supports many features like editor, organizer, etc.
 * Text Editor : **Kate** works good on KDE and has multi-tab support.
 * [AUR Helper](https://wiki.archlinux.org/title/Arch_User_Repository) : I used **yay** and refered to [How to Install Yay AUR Helper in Arch Linux and Manjaro](https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/) for installation.
 ```
-pacman -S spectacle kmplayer digikam kate
+pacman -S spectacle vlc digikam kate
 ```
 Kudos !! After installing the above packages and yay, you can now start to customized your Arch Linux.
 
