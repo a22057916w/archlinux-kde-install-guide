@@ -308,7 +308,7 @@ XMODIFIERS    DEFAULT=\@im=fcitx
 
 輸入法
 ```
-pacman -S fcitx-chewing
+pacman -S fcitx5-chewing
 ```
 
 字體字形
