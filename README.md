@@ -297,7 +297,7 @@ Fcitx5 is the successor of Fcitx, a lightweight input method framework aimed at 
 ```
 pacman -S fictx5
 ```
-Then install a GUI configuration tool for much more convenient.
+Then install a GUI configuration tool for convenient.
 ```
 pacman -S fictx5-configtool
 ```
