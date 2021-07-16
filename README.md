@@ -293,9 +293,11 @@ Kudos !! After installing the above packages and yay, you can now start to custo
 ## 中文化
 
 ### 輸入法框架(Input Method Framework)
+Fcitx5 is the successor of Fcitx, a lightweight input method framework aimed at providing environment-independent language support for Linux.
 ```
 pacman -S fictx5
 ```
+
 ```
 pacman -S fictx5-configtool
 ```
