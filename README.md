@@ -311,7 +311,7 @@ GTK_IM_MODULE DEFAULT=fcitx
 QT_IM_MODULE  DEFAULT=fcitx
 XMODIFIERS    DEFAULT=\@im=fcitx
 ```
-or edit `/etc/environment `and add the above lines:
+or edit `/etc/environment `and add the above lines.
 
 ### 輸入法(Input Method)
 ```
@@ -332,7 +332,7 @@ Then run:
 ```
 locale-gen
 ```
-chekc `locale` or `locale -a` for the language setup. Finally, reboot the system.
+check `locale` or `locale -a` for the language setup. Finally, reboot the system.
 ```
 reboot
 ```
