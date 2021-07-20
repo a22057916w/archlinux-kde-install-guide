@@ -313,15 +313,26 @@ XMODIFIERS    DEFAULT=\@im=fcitx
 ```
 or edit `/etc/environment `and add the above lines:
 
-輸入法(Input Method)
+### 輸入法(Input Method)
 ```
 pacman -S fcitx5-chewing
 ```
 
-字體字形
+### 字體字形(Font)
 ```
 pacman -S ttf-android adobe-source-han-sans-tw-fonts opendesktop-fonts
 ```
+### Configuring Locale
+Uncomment the following languages,
+```
+zh_TW.BIG-5
+zh_TW.UTF-8
+```
+then run:
+```
+locale-gen
+```
+run `locale` or `locale -a` to check the language setu.
 ```
 reboot
 ```
