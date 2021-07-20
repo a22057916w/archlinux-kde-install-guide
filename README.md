@@ -323,23 +323,19 @@ pacman -S fcitx5-chewing
 pacman -S ttf-android adobe-source-han-sans-tw-fonts opendesktop-fonts
 ```
 ### Configuring Locale
-Uncomment the following languages,
+Uncomment the following languages.
 ```
 zh_TW.BIG-5
 zh_TW.UTF-8
 ```
-then run:
+Then run:
 ```
 locale-gen
 ```
-run `locale` or `locale -a` to check the language setu.
+chekc `locale` or `locale -a` for the language setup. Finally, reboot the system.
 ```
 reboot
 ```
-
-### Resource
-* [(Other)UEFI? BIOS? Legacy? 淺談主機板UEFI觀念與迷思(轉錄) | by Ryan Lu | AI反斗城 | Medium](https://medium.com/ai%E5%8F%8D%E6%96%97%E5%9F%8E/other-uefi-bios-legacy-%E6%B7%BA%E8%AB%87%E4%B8%BB%E6%A9%9F%E6%9D%BFuefi%E8%A7%80%E5%BF%B5%E8%88%87%E8%BF%B7%E6%80%9D-%E8%BD%89%E9%8C%84-dc86f61b85bd)
-
 
 ## BACKUP and RESTORE
 
@@ -369,3 +365,4 @@ The ```-x``` stands for decompressoing or extracting file.
 * [tar(1) - Linux manual page](https://man7.org/linux/man-pages/man1/tar.1.html)
 * [hard drive - How would I use tar for full backup and restore with system on SSD and home on HDD? - Ask Ubuntu](https://askubuntu.com/questions/524418/how-would-i-use-tar-for-full-backup-and-restore-with-system-on-ssd-and-home-on-h?newreg=fcaa6c1531e344a5831b547eef344fa4)
 * [鳥哥的 Linux 私房菜 -- 淺談備份策略](http://linux.vbird.org/linux_basic/0580backup.php)
+* [Arch linux 安裝筆記 - HackMD](https://hackmd.io/zpYTK4HBTxWmcSDFWS2pqg)
