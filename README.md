@@ -302,24 +302,18 @@ Then install a GUI configuration tool for convenient.
 pacman -S fictx5-configtool
 ```
 Set environment variables for IM modules
-Define the environment variables to register the input method modules. Without these variables, applications may fallback to XIM protocol, except for qt5 applications which do not have XIM support and require an IM module in place.
+Define the environment variables to register the input method modules. Without these variables, applications may fallback to XIM protocol.
 
-As a general recommendation, define the following environment variables in ~/.pam_environment. This file will be read by the pam_env module for all logins, including both X11 and Wayland sessions.
+As a general recommendation, define the following environment variables in `~/.pam_environment`. This file will be read by the pam_env module for all logins, including both X11 and Wayland sessions.
 
-`~/.pam_environment`
 ```
 GTK_IM_MODULE DEFAULT=fcitx
 QT_IM_MODULE  DEFAULT=fcitx
 XMODIFIERS    DEFAULT=\@im=fcitx
 ```
-Edit `/etc/environment `and add the following lines:
-```
-GTK_IM_MODULE DEFAULT=fcitx
-QT_IM_MODULE  DEFAULT=fcitx
-XMODIFIERS    DEFAULT=\@im=fcitx
-```
+or edit `/etc/environment `and add the above lines:
 
-輸入法
+輸入法(Input Method)
 ```
 pacman -S fcitx5-chewing
 ```
