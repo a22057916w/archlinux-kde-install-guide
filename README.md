@@ -11,6 +11,11 @@ My personal Arch Linux configuration on my notebook. Feel free to try it.
 | Graphics | xf86-video-nouveau |
 | Audio | PulseAudio |
 
+## Disclaimer
+The guide is provided "as is" without warranty of any kind, either expressed or implied, including, but not limited to, the implied warranties of correctness and relevance to a particular subject. The entire risk as to the quality and accuracy of the content is with you. Should the content prove substandard, you assume the cost of all necessary servicing, repair, or correction.
+
+**Should this guide miss anything important or stated something wrong, please tell me at once. I'll corrected it ASAP.**
+
 ## Pre-installation
 This guide is based on `UEFI` system.
 Download the [latest boot image](https://archlinux.org/download/) and make a Live USB. To BIOS setting, disable the Secure Boot Control, the function will be automatically maintained by Arch Linux Kernel after completing the installation. Then boot with the Live USB.
