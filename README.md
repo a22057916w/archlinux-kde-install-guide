@@ -231,7 +231,6 @@ reboot
 Here I would install **Xorg** since the vast majority of native applications that exist were written for Xorg now.
 ```
 pacman -S xorg-server xorg-apps xort-xinit
-echo "exec startkde" >> ~/.xinitrc
 ```
 One can find the diffrence between Xorg and Wayland by refering to the [Xorg, X11, Wayland? Linux Display Servers And Protocols Explained](https://linuxiac.com/xorg-x11-wayland-linux-display-servers-and-protocols-explained/)
 
