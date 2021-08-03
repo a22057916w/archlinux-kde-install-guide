@@ -259,7 +259,7 @@ Still, we will need to install some essential utilities. Here are the ones I hav
 * File Manager: **Dolphin** is the file manager that I prefer to install.
 * Terminal: As for terminal, I would install **Konsole**. It is the default terminal app for KDE.
 ```
-pacman -S firefox dolphin konsole spectacle
+pacman -S firefox dolphin konsole 
 ```
 Then, configure the `networkmanager` for plasma-nm. Disable the original connection. For example, I used `dhcpcd` for the Ethernet connection.
 ```
