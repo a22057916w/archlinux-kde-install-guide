@@ -343,6 +343,12 @@ reboot
 ```
 
 ## Invalid Signature Errors and Cannot Import Keys
+For keyring error while updating the system, we need to update the package 'archlinux-keyring'.
+'''
+pacman -Sy archlinux-kerying
+'''
+If this command dosen't work, do the following step:
+'''
 
 
 ## BACKUP and RESTORE
