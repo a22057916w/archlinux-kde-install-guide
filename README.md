@@ -343,13 +343,19 @@ reboot
 ```
 
 ## Invalid Signature Errors and Cannot Import Keys
-For keyring error while updating the system, we need to update the package 'archlinux-keyring'.
-'''
+For keyring error while upgradeing the system, we need to update the package `archlinux-keyring`.
+```
 pacman -Sy archlinux-kerying
-'''
-If this command dosen't work, do the following step:
-'''
-
+```
+If that dosen't work, reset the keys by removing the `/etc/pacman.d/gnupg` directory and by rerunning `pacman-key --init` followed by `pacman-key --populate` to re-add the default keys, and `pacman-key --refersh-keys` for developer keys.
+```
+rm -r /etc/pacman.d/gnupg
+pacman-key --init
+pacman-key --populate
+pacman-key --refresh-keys
+```
+Then rerun `pacman -Sy archlinux-kerying` to upgrade the system. 
+If it still dosen't work, please refer to [pacman/Package signing - ArchWiki](https://wiki.archlinux.org/title/Pacman/Package_signing#Cannot_import_keys)
 
 ## BACKUP and RESTORE
 
