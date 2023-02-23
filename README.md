@@ -355,6 +355,7 @@ pacman-key --populate
 pacman-key --refresh-keys
 ```
 Then rerun `pacman -Sy archlinux-kerying` to upgrade the system. 
+
 If it still dosen't work, please refer to [pacman/Package signing - ArchWiki](https://wiki.archlinux.org/title/Pacman/Package_signing#Cannot_import_keys)
 
 ## BACKUP and RESTORE
